@@ -1,0 +1,11 @@
+/* This is a "COMMENT" and it's purpose is to give some meaningful information about CSS declarations */
+/* This is the body selector that targets the body element of my HTML file */
+body {
+    background-color: lightblue;
+}
+
+/* This is the h1 selector that targets and defines the styles of all h1 tags in my HTML file. */
+h1 {
+    text-align: justify;
+    color: navy;
+}
