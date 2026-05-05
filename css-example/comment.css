@@ -5,6 +5,8 @@ body {
 }
 
 /* This is the h1 selector that targets and defines the styles of all h1 tags in my HTML file. */
+/* And this is a typical example of a CSS rule */
+/* h1 is the `selector`, `text-align` and `color` are `properties`, `justify` and `navy` are their respective values */
 h1 {
     text-align: justify;
     color: navy;
