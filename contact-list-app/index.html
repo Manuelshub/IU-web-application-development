@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Contact Manager</h1>
+        <p>View, add and remove contacts from the list</p>
+    </div>
+    <div class="container">
+        <div class="form-card">
+            <p class="section-label">Add New Contact</p>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="input-name">Full Name</label>
+                    <input type="text" id="input-name" placeholder="e.g John Doe">
+                </div>
+                <div class="field">
+                    <label for="input-email">Email Address</label>
+                    <input type="text" id="input-email" placeholder="e.g john@example.com">
+                </div>
+                <div class="field">
+                    <label for="input-phone">Phone Number</label>
+                    <input type="text" id="input-phone" placeholder="e.g +234 800 000 0000">
+                </div>
+            </div>
+            <div id="error-msg"></div>
+            <button class="btn-add", onclick="addContact()">Add Contact</button>
+        </div>
+
+        <div class="table-card">
+            <div class="table-header">
+                <p class="section-label" style="margin:0;">Contact List</p>
+                <span class="contact-count" id="contact-count">0 contacts</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="contact-table-body">
+          <!-- Rows injected by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
