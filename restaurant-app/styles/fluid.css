@@ -1,0 +1,256 @@
+/* =============================================================
+   FLUID LAYOUT — Version 2
+   All dimensions are defined in percentages relative to viewport.
+   Nothing is fixed in pixels except font sizes and borders.
+   The layout stretches and contracts as the window resizes.
+   ============================================================= */
+ 
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: #f5f0eb;
+    color: #2c2c2c;
+}
+ 
+/* ---------- HEADER ---------- */
+#site-header {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 3% 5%;
+}
+ 
+.restaurant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6em;
+    color: #e8d5b0;
+    letter-spacing: 2px;
+}
+ 
+.restaurant-tagline {
+    font-size: 1em;
+    color: #a89070;
+    margin-top: 0.5%;
+    font-style: italic;
+}
+ 
+/* ---------- NAVIGATION ---------- */
+#main-nav {
+    width: 100%;
+    background-color: #2c2c2c;
+    padding: 0 5%;
+}
+ 
+.nav-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 56px;
+    gap: 3%;
+}
+ 
+.nav-list li {
+    display: block;
+}
+ 
+.nav-list li a {
+    text-decoration: none;
+    color: #e8d5b0;
+    font-size: 0.95em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.nav-list li a:hover {
+    color: #c8a96e;
+}
+ 
+/* ---------- HERO SECTION ---------- */
+#home {
+    width: 100%;
+    background-color: #3b2f2f;
+    padding: 4% 5%;
+}
+ 
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #e8d5b0;
+    margin-bottom: 2%;
+}
+ 
+.hero-text p {
+    font-size: 1em;
+    color: #c8b89a;
+    width: 60%;
+    line-height: 1.8;
+}
+ 
+/* ---------- MENU SECTION ---------- */
+#menu {
+    width: 100%;
+    padding: 4% 5%;
+    background-color: #fdf8f2;
+}
+ 
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #3b2f2f;
+    margin-bottom: 3%;
+    border-bottom: 2px solid #c8a96e;
+    padding-bottom: 1%;
+    width: 30%;
+}
+ 
+.menu-category {
+    margin-bottom: 4%;
+}
+ 
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #5a3e2b;
+    margin-bottom: 2%;
+}
+ 
+/* Fluid grid — three columns using percentages */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+ 
+.menu-item {
+    flex: 0 0 31%;       /* Three columns — each takes ~31% of the row */
+    background-color: #ffffff;
+    border: 1px solid #e0d4c0;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+ 
+.item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05em;
+    color: #3b2f2f;
+    margin-bottom: 0.5em;
+}
+ 
+.item-description {
+    font-size: 0.9em;
+    color: #7a6a58;
+    line-height: 1.6;
+    margin-bottom: 0.8em;
+}
+ 
+.item-price {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #c8a96e;
+}
+ 
+/* ---------- SPECIALS SECTION ---------- */
+#specials {
+    width: 100%;
+    padding: 4% 5%;
+    background-color: #3b2f2f;
+}
+ 
+#specials .section-title {
+    color: #e8d5b0;
+    border-bottom-color: #c8a96e;
+}
+ 
+.special-card {
+    width: 60%;
+    background-color: #2c2218;
+    border: 2px solid #c8a96e;
+    padding: 3%;
+}
+ 
+.special-badge {
+    display: inline-block;
+    background-color: #c8a96e;
+    color: #1a1a1a;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    margin-bottom: 1em;
+}
+ 
+.special-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75em;
+    color: #e8d5b0;
+    margin-bottom: 1%;
+}
+ 
+.special-description {
+    font-size: 0.95em;
+    color: #c8b89a;
+    line-height: 1.7;
+    width: 90%;
+    margin-bottom: 1.5%;
+}
+ 
+.special-price {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #c8a96e;
+}
+ 
+/* ---------- FOOTER ---------- */
+#site-footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding-top: 4%;
+}
+ 
+.footer-inner {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    padding-bottom: 3%;
+}
+ 
+.footer-block {
+    flex: 1;           /* Each block takes equal share of footer width */
+}
+ 
+.footer-block h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    color: #e8d5b0;
+    margin-bottom: 1em;
+}
+ 
+.footer-block p {
+    font-size: 0.9em;
+    color: #a89070;
+    line-height: 1.8;
+}
+ 
+.footer-bottom {
+    width: 100%;
+    background-color: #111111;
+    text-align: center;
+    padding: 1.2% 0;
+}
+ 
+.footer-bottom p {
+    font-size: 0.85em;
+    color: #6a5a48;
+}

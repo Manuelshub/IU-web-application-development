@@ -1,0 +1,442 @@
+/* =============================================================
+   ADAPTIVE LAYOUT — Version 3
+   Three distinct fixed layouts that snap at defined breakpoints.
+   No fluid scaling between breakpoints — layout SNAPS between states.
+   
+   Breakpoints:
+   - Large  (desktop) : above 1024px
+   - Medium (tablet)  : 768px – 1024px
+   - Small  (mobile)  : below 768px
+   ============================================================= */
+ 
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: #f5f0eb;
+    color: #2c2c2c;
+}
+ 
+/* =============================================================
+   LARGE — DESKTOP (above 1024px)
+   Full horizontal layout. Three-column menu grid. Wide header.
+   ============================================================= */
+ 
+/* ---------- HEADER ---------- */
+#site-header {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 40px 80px;
+}
+ 
+.restaurant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #e8d5b0;
+    letter-spacing: 2px;
+}
+ 
+.restaurant-tagline {
+    font-size: 16px;
+    color: #a89070;
+    margin-top: 8px;
+    font-style: italic;
+}
+ 
+/* ---------- NAVIGATION ---------- */
+#main-nav {
+    width: 100%;
+    background-color: #2c2c2c;
+    padding: 0 80px;
+}
+ 
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 56px;
+    gap: 40px;
+}
+ 
+.nav-list li a {
+    text-decoration: none;
+    color: #e8d5b0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.nav-list li a:hover {
+    color: #c8a96e;
+}
+ 
+/* ---------- HERO ---------- */
+#home {
+    width: 100%;
+    background-color: #3b2f2f;
+    padding: 60px 80px;
+}
+ 
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #e8d5b0;
+    margin-bottom: 20px;
+}
+ 
+.hero-text p {
+    font-size: 16px;
+    color: #c8b89a;
+    width: 700px;
+    line-height: 1.8;
+}
+ 
+/* ---------- MENU ---------- */
+#menu {
+    width: 100%;
+    padding: 60px 80px;
+    background-color: #fdf8f2;
+}
+ 
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #3b2f2f;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #c8a96e;
+    padding-bottom: 12px;
+    display: inline-block;
+}
+ 
+.menu-category {
+    margin-bottom: 50px;
+}
+ 
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #5a3e2b;
+    margin-bottom: 24px;
+}
+ 
+/* Three-column grid on desktop */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+ 
+.menu-item {
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #e0d4c0;
+    padding: 20px;
+}
+ 
+.item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: #3b2f2f;
+    margin-bottom: 8px;
+}
+ 
+.item-description {
+    font-size: 14px;
+    color: #7a6a58;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+ 
+.item-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c8a96e;
+}
+ 
+/* ---------- SPECIALS ---------- */
+#specials {
+    width: 100%;
+    padding: 60px 80px;
+    background-color: #3b2f2f;
+}
+ 
+#specials .section-title {
+    color: #e8d5b0;
+    border-bottom-color: #c8a96e;
+}
+ 
+.special-card {
+    width: 680px;
+    background-color: #2c2218;
+    border: 2px solid #c8a96e;
+    padding: 40px;
+}
+ 
+.special-badge {
+    display: inline-block;
+    background-color: #c8a96e;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+}
+ 
+.special-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #e8d5b0;
+    margin-bottom: 16px;
+}
+ 
+.special-description {
+    font-size: 15px;
+    color: #c8b89a;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+ 
+.special-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c8a96e;
+}
+ 
+/* ---------- FOOTER ---------- */
+#site-footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding-top: 60px;
+}
+ 
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 0 80px 40px;
+}
+ 
+.footer-block {
+    width: 280px;
+}
+ 
+.footer-block h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #e8d5b0;
+    margin-bottom: 14px;
+}
+ 
+.footer-block p {
+    font-size: 14px;
+    color: #a89070;
+    line-height: 1.8;
+}
+ 
+.footer-bottom {
+    width: 100%;
+    background-color: #111111;
+    text-align: center;
+    padding: 16px 0;
+}
+ 
+.footer-bottom p {
+    font-size: 13px;
+    color: #6a5a48;
+}
+ 
+/* =============================================================
+   MEDIUM — TABLET (768px to 1024px)
+   Navigation stays horizontal but tightens.
+   Menu switches to two-column grid.
+   Header text scales down.
+   This is a SNAP — not a gradual transition.
+   ============================================================= */
+@media screen and (max-width: 1024px) {
+    #site-header {
+        padding: 30px 40px;
+    }
+  
+    .restaurant-name {
+        font-size: 32px;
+    }
+  
+    .restaurant-tagline {
+        font-size: 14px;
+    }
+  
+    #main-nav {
+        padding: 0 40px;
+    }
+  
+    .nav-list {
+        gap: 24px;
+    }
+  
+    .nav-list li a {
+        font-size: 13px;
+    }
+  
+    #home {
+        padding: 40px;
+    }
+  
+    .hero-text h2 {
+        font-size: 26px;
+    }
+  
+    .hero-text p {
+        width: 100%;
+        font-size: 15px;
+    }
+  
+    #menu {
+        padding: 40px;
+    }
+  
+    .section-title {
+        font-size: 28px;
+    }
+  
+    /* Two-column grid on tablet */
+    .menu-item {
+        width: 280px;
+    }
+  
+    #specials {
+        padding: 40px;
+    }
+  
+    .special-card {
+        width: 100%;
+    }
+  
+    .special-name {
+        font-size: 22px;
+    }
+  
+    .footer-inner {
+        padding: 0 40px 30px;
+        gap: 30px;
+    }
+  
+    .footer-block {
+        width: 200px;
+    }
+}   
+ 
+/* =============================================================
+   SMALL — MOBILE (below 768px)
+   Everything stacks into a single column.
+   Navigation links stack vertically.
+   Menu items go full width.
+   Footer blocks stack vertically.
+   This is a SNAP — not a gradual transition.
+   ============================================================= */
+@media screen and (max-width: 767px) {
+ 
+    #site-header {
+        padding: 24px 20px;
+    }
+  
+    .restaurant-name {
+        font-size: 24px;
+    }
+  
+    .restaurant-tagline {
+        font-size: 13px;
+    }
+  
+    /* Navigation stacks vertically on mobile */
+    #main-nav {
+        padding: 16px 20px;
+    }
+  
+    .nav-list {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        gap: 14px;
+    }
+  
+    .nav-list li a {
+        font-size: 14px;
+    }
+  
+    #home {
+        padding: 24px 20px;
+    }
+  
+    .hero-text h2 {
+        font-size: 22px;
+    }
+  
+    .hero-text p {
+        width: 100%;
+        font-size: 14px;
+    }
+  
+    #menu {
+        padding: 24px 20px;
+    }
+  
+    .section-title {
+        font-size: 24px;
+        width: 100%;
+    }
+  
+    .category-title {
+        font-size: 20px;
+    }
+  
+    /* Single-column — full width menu items on mobile */
+    .menu-grid {
+        flex-direction: column;
+    }
+  
+    .menu-item {
+        width: 100%;
+    }
+  
+    #specials {
+        padding: 24px 20px;
+    }
+  
+    .special-card {
+        width: 100%;
+        padding: 20px;
+    }
+  
+    .special-name {
+        font-size: 20px;
+    }
+  
+    .special-description {
+        font-size: 14px;
+    }
+  
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        padding: 20px 20px 30px;
+        gap: 24px;
+    }
+  
+    .footer-block {
+        width: 100%;
+    }
+  
+    .footer-block h4 {
+        font-size: 16px;
+    }
+}
