@@ -52,11 +52,9 @@ function validateInputs(name, email, phone) {
     if (!name || !email || !phone) {
         return "All fields are required. Please fill out every field.";
     }
-
     if (!emailRegex.test(email)) {
         return "Please enter a valid email address (e.g. name@example.com).";
     }
-
     return null;
 }
 
